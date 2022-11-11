@@ -1,0 +1,47 @@
+Server:
+  GinMode: release #debug or release or test
+  HttpAddr: 0.0.0.0
+  HttpPort: 8080
+  ReadTimeout: 600
+  WriteTimeout: 600
+
+Tracer:
+  AgentHostPort: 11.11.11.15:6831
+
+Logger:
+  FilePath: ./runtime/logs # 日志文件路径
+  MaxSize: 128 # 每个日志文件保存的最大尺寸 单位：M 默认128
+  MaxBackups: 30 # 日志文件最多保存多少个备份 默认30
+  MaxAge: 7 # 文件最多保存多少天 默认 7
+  LocalTime: true
+  Compress: true # 是否压缩 默认true
+
+Email:
+  Host: smtp.qq.com
+  Port: 465
+  UserName: 745454106@qq.com
+  Password: gsuxbzlbhcakbfgb
+  IsSSL: true
+  From: 745454106@qq.com
+  To:
+    - 15811506097@163.com
+
+App:
+  Limit: 20 #每页分页默认
+  IsDel: false #默认不开启物理删除，即为软删除
+  UploadSavePath: storage/uploads
+  ExportSavePath: export
+  UploadServerUrl:
+  UploadImageMaxSize: 5 #MB
+  UploadImageAllowExts:
+    - .jpg
+    - .png
+    - .jpeg
+  UploadFileMaxSize: 50 #MB
+  UploadFileAllowExts:
+    - .xlsx
+    - .xls
+  DefaultContextTimeout: 60
+  CryptKey: BRLTSkFTCZrPC44kEkB6cQBf
+  InfoValidTime: 7200
+  QrCryptLength: 8
